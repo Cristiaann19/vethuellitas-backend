@@ -38,7 +38,7 @@ public class Venta {
     @JsonIgnoreProperties({"ventas", "usuario", "mascotas"})
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<DetalleVenta> detalles = new ArrayList<>();
 
     public enum Estadoventa{
