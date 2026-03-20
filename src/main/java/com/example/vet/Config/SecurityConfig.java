@@ -43,11 +43,6 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/servicios").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/servicios/activos").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/productos").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/ventas").authenticated()
-                        .requestMatchers(HttpMethod.GET, "/api/ventas/cliente/**").authenticated()
-                        .requestMatchers(HttpMethod.GET, "/api/ventas").authenticated()
-                        .requestMatchers(HttpMethod.GET, "/api/productos").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/pagos/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
