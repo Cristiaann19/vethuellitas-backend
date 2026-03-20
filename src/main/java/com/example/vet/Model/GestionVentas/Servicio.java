@@ -1,6 +1,7 @@
 package com.example.vet.Model.GestionVentas;
 
 import com.example.vet.Model.GestionUsuarios.TrabajadorServicio;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -38,6 +39,7 @@ public class Servicio {
 
     @OneToMany(mappedBy = "servicio", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnoreProperties("servicio")
+    @JsonIgnore
     private List<TrabajadorServicio> trabajadores = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
