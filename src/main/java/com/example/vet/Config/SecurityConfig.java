@@ -60,7 +60,8 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of(
                 "http://localhost:4200",
-                "https://vethuellitas-frontend.vercel.app"
+                "https://vethuellitas-frontend.vercel.app",
+                "https://vethuellitas-frontend-iqoy09ptf-cristians-projects-3b379a9d.vercel.app"
         ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
