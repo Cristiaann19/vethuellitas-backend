@@ -54,4 +54,10 @@ public class MascotaController {
         mascota.setId(id);
         return ResponseEntity.ok(mascotaService.guardar(mascota));
     }
+
+    @GetMapping("/cliente/{clienteId}")
+    public ResponseEntity<List<Mascota>> obtenerPorCliente(@PathVariable Long clienteId) {
+        List<Mascota> mascotas = mascotaService.listarPorCliente(clienteId);
+        return ResponseEntity.ok(mascotas);
+    }
 }

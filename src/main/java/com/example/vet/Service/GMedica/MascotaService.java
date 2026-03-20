@@ -36,4 +36,8 @@ public class MascotaService {
         logger.info("MASCOTA ELIMINADA" + id);
         mascotaRepository.deleteById(id);
     }
+
+    public List<Mascota> listarPorCliente(Long clienteId) {
+        return mascotaRepository.findByClienteId(clienteId);
+    }
 }
