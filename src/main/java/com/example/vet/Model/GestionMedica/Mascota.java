@@ -53,7 +53,7 @@ public class Mascota {
     @Column(columnDefinition = "TEXT")
     private String observaciones;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "cliente_id", nullable = false)
     @JsonIgnoreProperties("mascotas")
     @ToString.Exclude

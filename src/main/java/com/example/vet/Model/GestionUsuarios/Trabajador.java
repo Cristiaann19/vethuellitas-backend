@@ -47,7 +47,7 @@ public class Trabajador {
     private Usuario usuario;
 
     @ToString.Exclude
-    @OneToMany(mappedBy = "trabajador", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "trabajador", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonIgnoreProperties("trabajador")
     private List<TrabajadorServicio> servicios = new ArrayList<>();
 

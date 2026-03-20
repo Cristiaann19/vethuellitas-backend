@@ -24,7 +24,7 @@ public class DetalleVenta {
     private Integer cantidad;
     private Double subtotal;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "venta_id")
     @JsonIgnore
     @ToString.Exclude
