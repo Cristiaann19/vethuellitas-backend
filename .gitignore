@@ -35,5 +35,3 @@ build/
 ### VS Code ###
 .vscode/
 
-# Ignorar el archivo de propiedades que contiene secretos
-/src/main/resources/application.properties
